@@ -5,7 +5,6 @@
 <div align="center">
   <img src="https://img.shields.io/badge/language-TypeScript-blue" />
   <img src="https://img.shields.io/badge/runtime-Node.js-green" />
-  <img src="https://img.shields.io/badge/architecture-MVC-orange" />
 </div>
 
 ---
