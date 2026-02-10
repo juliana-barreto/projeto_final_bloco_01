@@ -143,7 +143,7 @@ Como Executar
 1. Clone o repositório:
 
 ```Bash
-git clone [https://github.com/juliana-barreto/NOME-DO-REPO.git](https://github.com/juliana-barreto/NOME-DO-REPO.git)
+git clone [https://github.com/juliana-barreto/projeto_final_bloco_01.git](https://github.com/juliana-barreto/projeto_final_bloco_01.git)
 ```
 
 2. Instale as dependências (incluindo readline-sync, colors e iconv-lite):
