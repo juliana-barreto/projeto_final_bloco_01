@@ -1,4 +1,4 @@
-# Sistema de E-Commerce (Loja de Games)
+# Loja de Games
 
 > Implementação de sistema de gerenciamento de estoque com foco em performance, integridade de dados e arquitetura em camadas.
 
