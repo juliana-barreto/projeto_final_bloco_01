@@ -21,9 +21,6 @@ export abstract class Product {
   }
   
   public set id(value: number) {
-    if (value <= 0) {
-      throw new Error('O ID do produto deve ser um número positivo.');
-    }
     this._id = value;
   }
 
