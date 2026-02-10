@@ -1,7 +1,7 @@
 import { ProductController } from './controller/ProductController';
 import { Game } from './model/Game';
 import { Console } from './model/Console';
-import { Peripheral } from './model/Peripheral'; 
+import { Peripheral } from './model/Peripheral';
 import { ProductType } from './util/ProductType';
 import { Colors } from './util/Colors';
 import { Input } from './util/Input';
@@ -9,6 +9,8 @@ import { Input } from './util/Input';
 const productController = new ProductController();
 
 export function main() {
+
+  createTestProducts(productController);
 
   let option: number;
 
@@ -94,7 +96,7 @@ function registerProduct(): void {
 
   const options = ['Jogo', 'Console', 'Periférico'];
   const index = Input.keyInSelect(options, "", { cancel: false });
-  const type : ProductType = index + 1;
+  const type: ProductType = index + 1;
 
   const price = Input.questionFloat("Digite o preço: ");
 
@@ -175,6 +177,42 @@ export function about(): void {
 export function keyPress(): void {
   console.log(Colors.reset, "\nPressione enter para continuar...");
   Input.prompt();
+}
+
+export function createTestProducts(productController: ProductController): void {
+  console.log("\nCarregando dados de teste...");
+
+  // Criação de um Jogo
+  productController.register(new Game(
+    productController.generateId(),
+    "The Last of Us Part II",
+    ProductType.GAME,
+    250.00,
+    "Ação/Aventura",
+    "Naughty Dog"
+  ));
+
+  // Criação de um Console
+  productController.register(new Console(
+    productController.generateId(),
+    "PlayStation 5",
+    ProductType.CONSOLE,
+    4500.00,
+    1024, // 1TB
+    "Sony"
+  ));
+
+  // Criação de um Periférico
+  productController.register(new Peripheral(
+    productController.generateId(),
+    "Mouse Gamer Logitech G502",
+    ProductType.PERIPHERAL,
+    350.00,
+    "Logitech",
+    "USB"
+  ));
+
+  console.log("Dados de teste carregados com sucesso!\n");
 }
 
 main();
