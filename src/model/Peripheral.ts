@@ -3,8 +3,8 @@ import { ProductType } from "../util/ProductType";
 
 export class Peripheral extends Product {
 
-  private _brand: string;
-  private _connectionType: string;
+  private _brand!: string;
+  private _connectionType!: string;
 
   constructor(id: number, name: string, type: ProductType, price: number, brand: string, connectionType: string) {
     super(id, name, type, price);

@@ -4,10 +4,10 @@ import { ProductType } from '../util/ProductType';
 
 export abstract class Product {
 
-  private _id: number;
-  private _name: string;
-  private _type: ProductType;
-  private _price: number;
+  private _id!: number;
+  private _name!: string;
+  private _type!: ProductType;
+  private _price!: number;
 
   constructor(id: number, name: string, type: ProductType, price: number) {
     this.id = id;

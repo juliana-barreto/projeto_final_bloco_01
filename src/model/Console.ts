@@ -3,8 +3,8 @@ import { ProductType } from "../util/ProductType";
 
 export class Console extends Product {
 
-  private _brand: string;
-  private _storage: number;
+  private _brand!: string;
+  private _storage!: number;
 
   constructor(id: number, name: string, type: ProductType, price: number, storage: number, brand: string) {
     super(id, name, type, price);

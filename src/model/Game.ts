@@ -3,8 +3,8 @@ import { ProductType } from "../util/ProductType";
 
 export class Game extends Product {
 
-  private _genre: string;
-  private _developer: string;
+  private _genre!: string;
+  private _developer!: string;
 
   constructor(id: number, name: string, type: ProductType, price: number, genre: string, developer: string) {
     super(id, name, type, price);
