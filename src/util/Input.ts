@@ -59,6 +59,9 @@ export class Input {
 	 * 🔧 Converte uma string UTF-8 para o encoding do console
 	 */
 	private static convertToConsole(text: string): string {
+		if (this.consoleEncoding === 'utf8') {
+			return text
+		}
 		const buffer = iconv.encode(text, this.consoleEncoding)
 		return buffer.toString('binary')
 	}
@@ -67,6 +70,9 @@ export class Input {
 	 * 🔧 Converte bytes do console para UTF-8
 	 */
 	private static convertFromConsole(rawText: string): string {
+		if (this.consoleEncoding === 'utf8') {
+			return rawText
+		}
 		const buffer = Buffer.from(rawText, 'binary')
 		return iconv.decode(buffer, this.consoleEncoding)
 	}
@@ -78,7 +84,7 @@ export class Input {
 		this.detectEncoding()
 
 		let finalConfig: any = {
-			encoding: 'binary',
+			encoding: this.consoleEncoding === 'utf8' ? 'utf8' : 'binary',
 			...config,
 		}
 
