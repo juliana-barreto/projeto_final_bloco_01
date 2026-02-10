@@ -1,10 +1,10 @@
-import { ProductController } from './controller/ProductController';
-import { Game } from './model/Game';
-import { Console } from './model/Console';
-import { Peripheral } from './model/Peripheral';
-import { ProductType } from './util/ProductType';
-import { Colors } from './util/Colors';
-import { Input } from './util/Input';
+import { ProductController } from './src/controller/ProductController';
+import { Game } from './src/model/Game';
+import { Console } from './src/model/Console';
+import { Peripheral } from './src/model/Peripheral';
+import { ProductType } from './src/util/ProductType';
+import { Colors } from './src/util/Colors';
+import { Input } from './src/util/Input';
 
 const productController = new ProductController();
 
